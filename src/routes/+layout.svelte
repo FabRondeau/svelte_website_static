@@ -1,4 +1,5 @@
 <script>
+import { base } from '$app/paths';
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
@@ -9,9 +10,9 @@
 
 
 <nav>
-	<a href="/">Accueil</a> |
-	<a href="/about">À propos</a> |
-	<a href="/contact">Contact</a>
+	<a href="{base}/">Accueil</a> |
+	<a href="{base}/about">À propos</a> |
+	<a href="{base}/contact">Contact</a>
 </nav>
 
 <main>

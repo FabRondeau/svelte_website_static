@@ -1,0 +1,1 @@
+import{f as e,m as t}from"../chunks/BchoDuwy.js";import"../chunks/xihTtKlq.js";var n=t(`<h1>Contact</h1>`);function r(t){var r=n();e(t,r)}export{r as component};

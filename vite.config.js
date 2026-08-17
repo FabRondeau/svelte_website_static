@@ -5,6 +5,9 @@ import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
+// On vérifie si la commande en cours est "build"
+const isBuilding = process.argv.includes('build');
+
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
@@ -27,9 +30,11 @@ export default defineConfig({
 					precompress: false,
 					strict: true
 				}),
-				paths: {
-					base: process.env.NODE_ENV === 'production' ? '/svelte_website_static' : ''
-				}
+			paths: {
+				base: process.env.NODE_ENV === 'production' ? '/svelte_website_static' : '',
+				relative: isBuilding
+			}
 		})
 	]
 });
+
